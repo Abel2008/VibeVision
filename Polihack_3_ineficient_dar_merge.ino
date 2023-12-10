@@ -7,6 +7,7 @@ int pin5 = 9;
 int pin6 = 8;
 int TIME;
 // 1 indexing
+// some other other comment
 short pins[7] = {0, pin1, pin2, pin3, pin4, pin5, pin6};
 String string;
 String msg = "Please input string:";
