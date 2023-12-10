@@ -7,7 +7,6 @@ int pin5 = 9;
 int pin6 = 8;
 int TIME;
 // 1 indexing
-// some other other comment
 short pins[7] = {0, pin1, pin2, pin3, pin4, pin5, pin6};
 String string;
 String msg = "Please input string:";
@@ -27,9 +26,7 @@ void setup() {
   for (int i = 1; i <= 6; ++i) {
     digitalWrite(pins[i], LOW);
   }
-  Serial.println("Cat timp sa lumineze fiecare pattern?(in secunde)");
-  while (Serial.available() == 0);
-  TIME = Serial.parseFloat() * 1000;
+  TIME=1000;  
 }
 
 void loop() {
@@ -44,7 +41,7 @@ void loop() {
       digitalWrite(pins[1],LOW);
       digitalWrite(pins[2],LOW);
       digitalWrite(pins[3],LOW);
-      digitalWrite(pins[4],LOW);
+      digitalWrite(pins[4],HIGH);
       digitalWrite(pins[5],LOW);
       digitalWrite(pins[6],HIGH);
       delay(TIME);
@@ -347,6 +344,30 @@ void loop() {
       digitalWrite(pins[2],HIGH);
       digitalWrite(pins[3],HIGH);
       digitalWrite(pins[4],HIGH);
+      digitalWrite(pins[5],LOW);
+      digitalWrite(pins[6],HIGH);
+      
+    }else if (c == '"') {
+      digitalWrite(pins[1],LOW);
+      digitalWrite(pins[2],HIGH);
+      digitalWrite(pins[3],HIGH);
+      digitalWrite(pins[4],LOW);
+      digitalWrite(pins[5],LOW);
+      digitalWrite(pins[6],HIGH);
+      
+    }else if (c == ' ') {
+      digitalWrite(pins[1],LOW);
+      digitalWrite(pins[2],LOW);
+      digitalWrite(pins[3],LOW);
+      digitalWrite(pins[4],LOW);
+      digitalWrite(pins[5],LOW);
+      digitalWrite(pins[6],LOW);
+      
+    }else if (c == '"') {
+      digitalWrite(pins[1],LOW);
+      digitalWrite(pins[2],HIGH);
+      digitalWrite(pins[3],HIGH);
+      digitalWrite(pins[4],LOW);
       digitalWrite(pins[5],LOW);
       digitalWrite(pins[6],HIGH);
       
